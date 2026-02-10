@@ -9,6 +9,12 @@ int main() {
     string s;
     cin >> s;
     
-    string m = reverse(s.begin(), s.end());
-     
+    string m = s;
+    reverse(m.begin(), m.end());
+
+    if(s > m) cout << "left" << '\n';
+    else if(s < m) cout << "right" << '\n';
+    else cout << "equal" << '\n';
+
+    return 0;
 }
