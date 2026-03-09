@@ -9,14 +9,12 @@ int main() {
     int a, b, c, x, y;
     cin >> a >> b >> c >> x >> y;
 
-    while(c >= x) {
+    while(c >= x || b >= y) {
         b += c / x;
         c %= x;
-        while(b >= y) {
-            a += b / y;
-            c += b / y;
-            b %= y;
-        }
+        a += b / y;
+        c += b / y;
+        b %= y;
     }
 
     cout << a << '\n';
